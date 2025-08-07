@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduBridge - Learn Anywhere</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+      color: #333;
+    }
+    header {
+      background-color: #007acc;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #005fa3;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.75rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .resource {
+      background: #e6f2ff;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-left: 5px solid #007acc;
+    }
+    h1, h2 {
+      color: #005fa3;
+    }
+    footer {
+      background-color: #007acc;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background-color: #007acc;
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EduBridge</h1>
+    <p>Learn Anywhere, Anytime – Bridging the Education Gap</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#resources">Resources</a>
+    <a href="#submit">Need Help?</a>
+  </nav>
+
+  <section class="container" id="home">
+    <h2>Welcome to EduBridge</h2>
+    <p>EduBridge is a platform designed to provide learners with access to free, low-data, high-quality educational resources. Whether you're in a rural school or just need extra help, we’ve got you covered.</p>
+  </section>
+
+  <section class="container" id="resources">
+    <h2>Top Free Learning Resources</h2>
+    <div class="resource">
+      <h3>Khan Academy <i class="fas fa-external-link-alt"></i></h3>
+      <p>A library of free courses in Maths, Science, Economics and more.</p>
+      <a href="https://www.khanacademy.org" target="_blank">Visit Khan Academy</a>
+    </div>
+    <div class="resource">
+      <h3>Siyavula <i class="fas fa-external-link-alt"></i></h3>
+      <p>South African curriculum-aligned Maths and Science practice platform.</p>
+      <a href="https://www.siyavula.com" target="_blank">Visit Siyavula</a>
+    </div>
+    <div class="resource">
+      <h3>Coursera <i class="fas fa-external-link-alt"></i></h3>
+      <p>Free online courses from top universities and companies.</p>
+      <a href="https://www.coursera.org" target="_blank">Visit Coursera</a>
+    </div>
+  </section>
+
+  <section class="container" id="submit">
+    <h2>Need Help Accessing Learning Materials?</h2>
+    <p>Let us know what you need and we’ll try to support your learning journey.</p>
+    <form>
+      <input type="text" placeholder="Your Full Name" required>
+      <input type="email" placeholder="Your Email Address" required>
+      <textarea rows="4" placeholder="What do you need help with?" required></textarea>
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 EduBridge | Built for FNB App Academy Challenge</p>
+  </footer>
+</body>
+</html>
