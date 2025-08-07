@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Opportunities | EduBridge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #1a73e8;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        section {
+            padding: 2rem;
+        }
+        h2 {
+            color: #1a73e8;
+        }
+        form, .quiz {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        label {
+            display: block;
+            margin-top: 1rem;
+        }
+        select, input[type="text"], button {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            background-color: #1a73e8;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        button:hover {
+            background-color: #0c5cd7;
+        }
+        .result {
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            background-color: #1a73e8;
+            color: white;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Explore Opportunities</h1>
+    </header>
+
+    <section>
+        <h2>🔍 Scholarship Finder</h2>
+        <form id="scholarshipForm">
+            <label for="location">Location:</label>
+            <select id="location" required>
+                <option value="">Select your location</option>
+                <option value="South Africa">South Africa</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Kenya">Kenya</option>
+            </select>
+
+            <label for="age">Age Group:</label>
+            <select id="age" required>
+                <option value="">Select age group</option>
+                <option value="Under 18">Under 18</option>
+                <option value="18-25">18–25</option>
+                <option value="26+">26+</option>
+            </select>
+
+            <label for="field">Field of Interest:</label>
+            <input type="text" id="field" placeholder="e.g. Engineering, Teaching" required>
+
+            <button type="button" onclick="findScholarship()">Find Scholarships</button>
+            <p class="result" id="scholarshipResult"></p>
+        </form>
+
+        <h2>💡 Career Discovery Quiz</h2>
+        <div class="quiz">
+            <label>1. What do you enjoy most?</label>
+            <select id="q1">
+                <option value="">Choose one</option>
+                <option value="a">Solving puzzles</option>
+                <option value="b">Helping others</option>
+                <option value="c">Building things</option>
+            </select>
+
+            <label>2. Preferred environment?</label>
+            <select id="q2">
+                <option value="">Choose one</option>
+                <option value="a">Office</option>
+                <option value="b">Classroom</option>
+                <option value="c">Outdoors</option>
+            </select>
+
+            <label>3. Your strength is:</label>
+            <select id="q3">
+                <option value="">Choose one</option>
+                <option value="a">Logic</option>
+                <option value="b">Empathy</option>
+                <option value="c">Creativity</option>
+            </select>
+
+            <button onclick="getCareer()">Get My Career</button>
+            <p class="result" id="careerResult"></p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 EduBridge | Built with ❤️ for the FNB App Academy Challenge
+    </footer>
+
+    <script>
+        function findScholarship() {
+            const location = document.getElementById("location").value;
+            const age = document.getElementById("age").value;
+            const field = document.getElementById("field").value;
+
+            if (location && age && field) {
+                document.getElementById("scholarshipResult").innerText =
+                    "🎓 Showing scholarships for " + field + " in " + location + " (Age: " + age + ").";
+            } else {
+                document.getElementById("scholarshipResult").innerText =
+                    "⚠️ Please fill in all fields to get results.";
+            }
+        }
+
+        function getCareer() {
+            const q1 = document.getElementById("q1").value;
+            const q2 = document.getElementById("q2").value;
+            const q3 = document.getElementById("q3").value;
+
+            if (q1 && q2 && q3) {
+                const code = q1 + q2 + q3;
+                let result = "";
+
+                if (code.includes("a")) result = "You'd be great as a Data Analyst or Software Engineer!";
+                else if (code.includes("b")) result = "You should consider Teaching or Social Work!";
+                else if (code.includes("c")) result = "You’d shine as an Architect or Creative Director!";
+                else result = "Try again with different answers.";
+
+                document.getElementById("careerResult").innerText = "🌟 " + result;
+            } else {
+                document.getElementById("careerResult").innerText =
+                    "⚠️ Please answer all questions.";
+            }
+        }
+    </script>
+</body>
+</html>
