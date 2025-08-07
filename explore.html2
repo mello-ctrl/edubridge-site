@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore Opportunities | EduBridge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Explore Opportunities</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Find Your Path</h2>
+      <p>Access scholarships, mentorships, and programs designed to support your education journey.</p>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <h3>Scholarships</h3>
+        <p>Explore available bursaries for South African students in tech and science fields.</p>
+        <a href="#">View Scholarships</a>
+      </div>
+      <div class="card">
+        <h3>Mentorship</h3>
+        <p>Get connected to mentors who are professionals in your field of interest.</p>
+        <a href="#">Find a Mentor</a>
+      </div>
+      <div class="card">
+        <h3>Bootcamps & Courses</h3>
+        <p>Join short courses and upskill in areas like coding, data science, and more.</p>
+        <a href="#">Browse Courses</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EduBridge | Empowering the Next Generation</p>
+  </footer>
+</body>
+</html>
+
+
+Added explore.html page
